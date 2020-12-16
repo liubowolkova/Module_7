@@ -8,23 +8,27 @@
 import UIKit
 
 class Task1ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    var myColor = UIColor.darkGray
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let viewController = segue.destination as? Task1ColoredViewController {
-            switch segue.identifier {
-            case "ShowColoredGreen" :
-                viewController.currentColor = UIColor.green
-            case "ShowColoredBlue" :
-                viewController.currentColor = UIColor.blue
-            case "ShowColoredRed" :
-                viewController.currentColor = UIColor.red
-            default: break
-            }
+    func getBackground() -> UIColor {
+        return self.myColor
+    }
+
+    @IBAction func showAnotherController(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            self.myColor = .green
+        case 1:
+            self.myColor = .blue
+        case 2:
+            self.myColor = .red
+        default:
+            break
         }
+        if let vc = storyboard?.instantiateViewController(identifier: "ColoredView1") as? Task1ColoredViewController {
+            vc.show(vc, sender: nil)
+            //vc.setBackground(self.getBackground())
+        }
+        // не работает, почему-то не открывает новый вью вовсе
     }
 }

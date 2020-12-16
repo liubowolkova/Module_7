@@ -8,14 +8,13 @@
 import UIKit
 
 class Task1ColoredViewController: UIViewController {
-    var currentColor = UIColor.yellow
     @IBOutlet var mainView: UIView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        mainView.backgroundColor = currentColor
+    override func viewDidLoad() {
+        self.setBackground(.yellow)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func setBackground(_ color: UIColor) {
+        mainView.backgroundColor = color
     }
 }
