@@ -8,28 +8,32 @@
 import UIKit
 
 class Task1ViewController: UIViewController {
-    var myColor = UIColor.darkGray
+    var chosenColor = UIColor.darkGray
+    var companionColor = UIColor.white
+    @IBOutlet weak var buttonView: UIView!
     
-    func getBackground() -> UIColor {
-        return self.myColor
+    override func viewWillAppear(_ animated: Bool) {
+        buttonView.layer.cornerRadius = 10
     }
 
     @IBAction func showAnotherController(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            self.myColor = .green
+            self.chosenColor = .green
+            self.companionColor = UIColor(displayP3Red: 5, green: 91, blue: 0, alpha: 1)
         case 1:
-            self.myColor = .blue
+            self.chosenColor = .blue
+            self.companionColor = UIColor(displayP3Red: 0, green: 6, blue: 91, alpha: 1)
         case 2:
-            self.myColor = .red
+            self.chosenColor = .red
+            self.companionColor = UIColor(displayP3Red: 150, green: 14, blue: 0, alpha: 1)
         default:
             break
         }
         if let vc = storyboard?.instantiateViewController(identifier: "ColoredView1") as? Task1ColoredViewController {
-            vc.currentColor = self.myColor
+            vc.currentViewColor = self.chosenColor
+            vc.currentIconColor = self.companionColor
             show(vc, sender: nil)
-            //vc.setBackground(self.getBackground())
         }
-        // не работает, почему-то не открывает новый вью вовсе
     }
 }

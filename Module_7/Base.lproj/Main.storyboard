@@ -47,13 +47,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-Bw-9O8">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-Bw-9O8">
                                 <rect key="frame" x="87" y="328" width="240" height="240"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-Ed-fRK">
-                                        <rect key="frame" x="79" y="191" width="82" height="36"/>
+                                        <rect key="frame" x="74" y="181" width="91" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Красный">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
@@ -62,9 +62,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-WG-ZHl">
-                                        <rect key="frame" x="90" y="105" width="60" height="36"/>
+                                        <rect key="frame" x="87" y="109" width="68" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Синий">
                                             <color key="titleColor" systemColor="systemBlueColor"/>
                                         </state>
@@ -73,9 +73,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-Uw-jTf">
-                                        <rect key="frame" x="80" y="14" width="81" height="36"/>
+                                        <rect key="frame" x="76" y="26" width="91" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Зелёный">
                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                         </state>
@@ -84,7 +84,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="0.75455301183894918" blue="0.70309588907875886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="ILh-OZ-ZWI"/>
                                     <constraint firstAttribute="width" constant="240" id="MzI-WK-lvb"/>
@@ -99,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Задание a" id="6mk-Ra-djU"/>
                     <connections>
+                        <outlet property="buttonView" destination="mYC-Bw-9O8" id="Hbb-WW-YAJ"/>
                         <segue destination="27o-YJ-h4Y" kind="show" identifier="ShowTask1Colored" id="3W3-CR-DRK"/>
                     </connections>
                 </viewController>
@@ -113,17 +114,32 @@
                     <view key="view" contentMode="scaleToFill" id="WUz-FE-x7m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="i0B-6K-aDu">
+                                <rect key="frame" x="87" y="379" width="240" height="137.5"/>
+                                <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="08C-lZ-8xk"/>
+                                    <constraint firstAttribute="height" constant="140" id="tRE-hG-Gcj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0fO-OI-iv5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i0B-6K-aDu" firstAttribute="centerY" secondItem="WUz-FE-x7m" secondAttribute="centerY" id="SuW-o0-kKd"/>
+                            <constraint firstItem="i0B-6K-aDu" firstAttribute="centerX" secondItem="WUz-FE-x7m" secondAttribute="centerX" id="feI-B5-Ugi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="coe-lX-fGL"/>
                     <connections>
                         <outlet property="mainView" destination="WUz-FE-x7m" id="Iv4-4m-RrQ"/>
+                        <outlet property="successIconImageView" destination="i0B-6K-aDu" id="8eY-AB-4kA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQ8-TZ-NxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="-704"/>
+            <point key="canvasLocation" x="921.73913043478262" y="-704.46428571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fr8-Jo-PqW">
@@ -273,6 +289,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="hand.point.up" catalog="system" width="111" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

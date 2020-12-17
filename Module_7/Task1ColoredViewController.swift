@@ -9,14 +9,18 @@ import UIKit
 
 class Task1ColoredViewController: UIViewController {
     @IBOutlet var mainView: UIView!
-    var currentColor = UIColor.brown
+    var currentViewColor = UIColor.brown
+    
+    @IBOutlet weak var successIconImageView: UIImageView!
+    var currentIconColor = UIColor.white
     
     override func viewDidLoad() {
-        //self.setBackground(.yellow)
-        mainView.backgroundColor = currentColor
+        mainView.backgroundColor = currentViewColor
+        successIconImageView.tintColor = currentIconColor
     }
     
-    func setBackground(_ color: UIColor) {
-        mainView.backgroundColor = color
+    override func viewDidAppear(_ animated: Bool) {
+        self.successIconImageView.isHidden = false
     }
+
 }
