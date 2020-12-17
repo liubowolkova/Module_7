@@ -9,9 +9,11 @@ import UIKit
 
 class Task1ColoredViewController: UIViewController {
     @IBOutlet var mainView: UIView!
+    var currentColor = UIColor.brown
     
     override func viewDidLoad() {
-        self.setBackground(.yellow)
+        //self.setBackground(.yellow)
+        mainView.backgroundColor = currentColor
     }
     
     func setBackground(_ color: UIColor) {

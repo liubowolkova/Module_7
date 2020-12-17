@@ -26,7 +26,8 @@ class Task1ViewController: UIViewController {
             break
         }
         if let vc = storyboard?.instantiateViewController(identifier: "ColoredView1") as? Task1ColoredViewController {
-            vc.show(vc, sender: nil)
+            vc.currentColor = self.myColor
+            show(vc, sender: nil)
             //vc.setBackground(self.getBackground())
         }
         // не работает, почему-то не открывает новый вью вовсе

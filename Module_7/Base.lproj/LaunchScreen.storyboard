@@ -15,9 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Загрузка..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axE-LK-YMP">
-                                <rect key="frame" x="145" y="405" width="124" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axE-LK-YMP">
+                                <rect key="frame" x="144.5" y="400.5" width="125" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="BP9-OF-Vnr"/>
+                                    <constraint firstAttribute="height" constant="95" id="JlR-TB-RoV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -25,6 +28,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="axE-LK-YMP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="937-S3-KA8"/>
+                            <constraint firstItem="axE-LK-YMP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bcf-6y-mzh"/>
+                            <constraint firstItem="axE-LK-YMP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rPR-gD-58l"/>
+                            <constraint firstItem="axE-LK-YMP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xge-vl-ORI"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>

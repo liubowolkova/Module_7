@@ -47,65 +47,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-WG-ZHl">
-                                <rect key="frame" x="166" y="272" width="82" height="36"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYC-Bw-9O8">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-Ed-fRK">
+                                        <rect key="frame" x="79" y="191" width="82" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Красный">
+                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="sTt-Wj-8Qt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-WG-ZHl">
+                                        <rect key="frame" x="90" y="105" width="60" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Синий">
+                                            <color key="titleColor" systemColor="systemBlueColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="EHI-dJ-CgA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-Uw-jTf">
+                                        <rect key="frame" x="80" y="14" width="81" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Зелёный">
+                                            <color key="titleColor" systemColor="systemGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="Csp-dM-7ho"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Hag-GS-gBu"/>
-                                    <constraint firstAttribute="width" constant="82" id="Lkq-tq-txp"/>
-                                    <constraint firstAttribute="height" constant="36" id="kyV-2k-qF3"/>
+                                    <constraint firstAttribute="height" constant="240" id="ILh-OZ-ZWI"/>
+                                    <constraint firstAttribute="width" constant="240" id="MzI-WK-lvb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Синий">
-                                    <color key="titleColor" systemColor="systemBlueColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="EHI-dJ-CgA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uH9-Ed-fRK">
-                                <rect key="frame" x="166" y="358" width="82" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="Zy4-e1-bis"/>
-                                    <constraint firstAttribute="height" constant="36" id="pgD-0b-m2Z"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="qnQ-mH-86I"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Красный">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="sTt-Wj-8Qt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0A-Uw-jTf">
-                                <rect key="frame" x="166" y="181" width="82" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="82" id="2mK-y4-iGs"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="82" id="4pQ-FD-pTk"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="36" id="Mmd-jU-eWm"/>
-                                    <constraint firstAttribute="height" constant="36" id="Mno-Jz-Hba"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="ylx-m4-zB0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Зелёный">
-                                    <color key="titleColor" systemColor="systemGreenColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="showAnotherController:" destination="PDH-vE-Izu" eventType="touchUpInside" id="Csp-dM-7ho"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZUI-Bm-TiR"/>
                         <constraints>
-                            <constraint firstItem="c0A-Uw-jTf" firstAttribute="top" secondItem="ZUI-Bm-TiR" secondAttribute="top" constant="93" id="99C-XF-OfY"/>
-                            <constraint firstItem="uH9-Ed-fRK" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="D3U-iM-XVq"/>
-                            <constraint firstItem="ubE-WG-ZHl" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="FG3-gX-ahF"/>
-                            <constraint firstItem="uH9-Ed-fRK" firstAttribute="leading" secondItem="ubE-WG-ZHl" secondAttribute="leading" id="UI6-BK-eWr"/>
-                            <constraint firstItem="uH9-Ed-fRK" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="d21-I0-MLO"/>
-                            <constraint firstItem="ubE-WG-ZHl" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="gro-my-aGL"/>
-                            <constraint firstItem="c0A-Uw-jTf" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="hoK-2T-zX7"/>
-                            <constraint firstItem="c0A-Uw-jTf" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="mGy-Wj-ciW"/>
-                            <constraint firstItem="ubE-WG-ZHl" firstAttribute="leading" secondItem="c0A-Uw-jTf" secondAttribute="leading" id="osV-kI-0an"/>
+                            <constraint firstItem="mYC-Bw-9O8" firstAttribute="centerX" secondItem="4Z9-sW-wLS" secondAttribute="centerX" id="Gwz-5z-BVJ"/>
+                            <constraint firstItem="mYC-Bw-9O8" firstAttribute="centerY" secondItem="4Z9-sW-wLS" secondAttribute="centerY" id="Jcq-Kr-BYl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Задание a" id="6mk-Ra-djU"/>
@@ -115,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En0-Lg-UAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="-704"/>
+            <point key="canvasLocation" x="231.8840579710145" y="-704.46428571428567"/>
         </scene>
         <!--Task1 Colored View Controller-->
         <scene sceneID="1t2-Aw-gGU">
