@@ -11,7 +11,7 @@
         <!--b-->
         <scene sceneID="uZe-26-E3w">
             <objects>
-                <viewController id="gI1-hd-CwK" sceneMemberID="viewController">
+                <viewController id="gI1-hd-CwK" customClass="Task2ViewController" customModule="Module_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qei-wG-ALV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,55 +26,106 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfI-cJ-dY9">
-                                <rect key="frame" x="157" y="125" width="100" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбран зелёный" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EfI-cJ-dY9">
+                                <rect key="frame" x="119.5" y="125" width="175" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fG2-td-iEd">
-                                <rect key="frame" x="163" y="250" width="91" height="23"/>
+                                <rect key="frame" x="154.5" y="248" width="105.5" height="23"/>
                                 <state key="normal" title="Изменить" image="paintbrush.fill" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4eX-Mo-dJn" kind="show" id="tpN-oW-fCO"/>
+                                    <action selector="showNextCntroller:" destination="gI1-hd-CwK" eventType="touchUpInside" id="gRb-Rl-gQ1"/>
+                                    <segue destination="4eX-Mo-dJn" kind="show" identifier="segueViewChooseController" id="yXi-S7-Yvz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hu3-VJ-e2Z"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="hu3-VJ-e2Z" firstAttribute="trailing" secondItem="EfI-cJ-dY9" secondAttribute="trailing" constant="157" id="2nK-HB-Oj6"/>
-                            <constraint firstItem="fG2-td-iEd" firstAttribute="leading" secondItem="hu3-VJ-e2Z" secondAttribute="leading" constant="163" id="3xX-5p-Tdz"/>
-                            <constraint firstItem="hu3-VJ-e2Z" firstAttribute="trailing" secondItem="fG2-td-iEd" secondAttribute="trailing" constant="160" id="EYe-LS-w1N"/>
+                            <constraint firstItem="fG2-td-iEd" firstAttribute="centerX" secondItem="qei-wG-ALV" secondAttribute="centerX" id="6oL-uV-sGF"/>
                             <constraint firstItem="K3A-n8-WyZ" firstAttribute="centerX" secondItem="qei-wG-ALV" secondAttribute="centerX" id="HVN-ZQ-FQU"/>
+                            <constraint firstItem="EfI-cJ-dY9" firstAttribute="centerX" secondItem="qei-wG-ALV" secondAttribute="centerX" id="c52-cC-s7Y"/>
                             <constraint firstItem="EfI-cJ-dY9" firstAttribute="top" secondItem="hu3-VJ-e2Z" secondAttribute="top" constant="81" id="eJZ-az-eFA"/>
-                            <constraint firstItem="EfI-cJ-dY9" firstAttribute="leading" secondItem="hu3-VJ-e2Z" secondAttribute="leading" constant="157" id="on9-29-12B"/>
+                            <constraint firstItem="fG2-td-iEd" firstAttribute="top" secondItem="EfI-cJ-dY9" secondAttribute="bottom" constant="95" id="sj2-XU-kyJ"/>
                             <constraint firstItem="K3A-n8-WyZ" firstAttribute="top" secondItem="hu3-VJ-e2Z" secondAttribute="top" constant="18" id="t6L-8O-Qg9"/>
-                            <constraint firstItem="fG2-td-iEd" firstAttribute="top" secondItem="EfI-cJ-dY9" secondAttribute="bottom" constant="97" id="zdC-l9-QAJ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="b" image="hand.point.up" catalog="system" id="Gha-Zz-CIe"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="EfI-cJ-dY9" id="2Jy-F5-RBz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2I-5l-MXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-728.98550724637687" y="30.803571428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose View Controller-->
         <scene sceneID="xyB-OZ-i6y">
             <objects>
-                <viewController id="4eX-Mo-dJn" sceneMemberID="viewController">
+                <viewController id="4eX-Mo-dJn" customClass="ChooseViewController" customModule="Module_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1c-wz-QRW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выбран зелёный" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Pc-ijz">
+                                <rect key="frame" x="115.5" y="94" width="183" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-oU-LNb">
+                                <rect key="frame" x="125.5" y="178" width="163" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Выбрать зелёный">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="DQH-6H-AHR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-0q-94y">
+                                <rect key="frame" x="137" y="235" width="140" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Выбрать синий"/>
+                                <connections>
+                                    <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="vHm-Bp-fI7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Xe-jcC">
+                                <rect key="frame" x="125" y="298" width="164" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Выбрать красный">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="zB2-9H-vcD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8LJ-TR-0A6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dgx-0q-94y" firstAttribute="top" secondItem="ebs-oU-LNb" secondAttribute="bottom" constant="21" id="05U-rF-JIO"/>
+                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="2Q5-Lq-eRr"/>
+                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="top" secondItem="dgx-0q-94y" secondAttribute="bottom" constant="27" id="SK0-kx-ISn"/>
+                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="VOn-qW-PzY"/>
+                            <constraint firstItem="dgx-0q-94y" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="Wco-vE-m2m"/>
+                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="top" secondItem="8LJ-TR-0A6" secondAttribute="top" constant="94" id="eaM-dr-vUf"/>
+                            <constraint firstItem="ebs-oU-LNb" firstAttribute="top" secondItem="wPW-Pc-ijz" secondAttribute="bottom" constant="50" id="hhA-sj-S50"/>
+                            <constraint firstItem="ebs-oU-LNb" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="tSe-aQ-E7p"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XQa-sP-ATR"/>
+                    <connections>
+                        <outlet property="infoTextField" destination="wPW-Pc-ijz" id="fqw-MY-LPo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AeH-AL-6OC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-33" y="31"/>
+            <point key="canvasLocation" x="-33.333333333333336" y="30.803571428571427"/>
         </scene>
         <!--Задание a-->
         <scene sceneID="Cck-jp-pda">
@@ -359,6 +410,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
