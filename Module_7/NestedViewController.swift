@@ -18,12 +18,12 @@ class NestedViewController: UIViewController {
         mainView.backgroundColor = currentColor
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if var viewController = segue.destination as? InnerViewController, segue.identifier == "EmbedWithin" {
-            innerController = viewController
-            innerController!.currentColor = innerCurrentColor
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if var viewController = segue.destination as? InnerViewController, segue.identifier == "EmbedWithin" {
+//            innerController = viewController
+//            innerController!.currentColor = innerCurrentColor
+//        }
+//    }
     
     @IBAction func onChangeToGreen(_ sender: Any) {
         innerCurrentColor = UIColor.green

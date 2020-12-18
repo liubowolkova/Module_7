@@ -20,13 +20,13 @@ class Task1ViewController: UIViewController {
         switch sender.tag {
         case 0:
             self.chosenColor = .green
-            self.companionColor = UIColor(displayP3Red: 5, green: 91, blue: 0, alpha: 1)
+            self.companionColor = .yellow
         case 1:
             self.chosenColor = .blue
-            self.companionColor = UIColor(displayP3Red: 0, green: 6, blue: 91, alpha: 1)
+            self.companionColor = .systemTeal
         case 2:
             self.chosenColor = .red
-            self.companionColor = UIColor(displayP3Red: 150, green: 14, blue: 0, alpha: 1)
+            self.companionColor = .orange
         default:
             break
         }
