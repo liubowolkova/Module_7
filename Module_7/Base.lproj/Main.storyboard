@@ -38,7 +38,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="showNextCntroller:" destination="gI1-hd-CwK" eventType="touchUpInside" id="gRb-Rl-gQ1"/>
                                     <segue destination="4eX-Mo-dJn" kind="show" identifier="segueViewChooseController" id="yXi-S7-Yvz"/>
                                 </connections>
                             </button>

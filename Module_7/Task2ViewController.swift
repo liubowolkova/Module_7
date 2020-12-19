@@ -10,20 +10,25 @@ import UIKit
 class Task2ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
-    var textColor = "blue"
+    var textColor = "зелёный"
     var backgroundColor = UIColor.green
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.infoLabel.text = "Выбран \(textColor)"
+        self.infoLabel.text = "Выбран \(self.textColor)"
+        self.view.backgroundColor = self.backgroundColor
     }
     
-    @IBAction func showNextCntroller(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(identifier: "ChooseController") as? ChooseViewController {
-            print("this \(self.textColor)")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? ChooseViewController, segue.identifier == "segueViewChooseController" else { return }
         vc.text = self.textColor
-        print("in func")
-        show(vc, sender: nil)
-        }
+        vc.delegate = self
+    }
+}
+
+extension Task2ViewController: ChooseViewDelegate {
+    func setBackground(backgroundColor: UIColor, text: String) {
+        self.backgroundColor = backgroundColor
+        self.textColor = text
     }
 }
