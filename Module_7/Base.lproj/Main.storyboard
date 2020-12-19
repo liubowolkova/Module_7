@@ -66,18 +66,20 @@
         <!--Choose View Controller-->
         <scene sceneID="xyB-OZ-i6y">
             <objects>
-                <viewController id="4eX-Mo-dJn" customClass="ChooseViewController" customModule="Module_7" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseController" id="4eX-Mo-dJn" customClass="ChooseViewController" customModule="Module_7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M1c-wz-QRW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Выбран зелёный" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Pc-ijz">
-                                <rect key="frame" x="115.5" y="94" width="183" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Green chosen" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Pc-ijz">
+                                <rect key="frame" x="132" y="94" width="150" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-oU-LNb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-oU-LNb">
                                 <rect key="frame" x="125.5" y="178" width="163" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать зелёный">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
@@ -86,16 +88,18 @@
                                     <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="DQH-6H-AHR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-0q-94y">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-0q-94y">
                                 <rect key="frame" x="137" y="235" width="140" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать синий"/>
                                 <connections>
                                     <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="vHm-Bp-fI7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Xe-jcC">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Xe-jcC">
                                 <rect key="frame" x="125" y="298" width="164" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать красный">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -107,16 +111,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8LJ-TR-0A6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="dgx-0q-94y" firstAttribute="top" secondItem="ebs-oU-LNb" secondAttribute="bottom" constant="21" id="05U-rF-JIO"/>
-                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="2Q5-Lq-eRr"/>
-                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="top" secondItem="dgx-0q-94y" secondAttribute="bottom" constant="27" id="SK0-kx-ISn"/>
-                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="VOn-qW-PzY"/>
-                            <constraint firstItem="dgx-0q-94y" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="Wco-vE-m2m"/>
-                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="top" secondItem="8LJ-TR-0A6" secondAttribute="top" constant="94" id="eaM-dr-vUf"/>
-                            <constraint firstItem="ebs-oU-LNb" firstAttribute="top" secondItem="wPW-Pc-ijz" secondAttribute="bottom" constant="50" id="hhA-sj-S50"/>
-                            <constraint firstItem="ebs-oU-LNb" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="tSe-aQ-E7p"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XQa-sP-ATR"/>
                     <connections>
