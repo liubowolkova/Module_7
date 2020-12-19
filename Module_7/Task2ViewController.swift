@@ -10,8 +10,16 @@ import UIKit
 class Task2ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
-    var textColor = "зелёный"
-    var backgroundColor = UIColor.green
+    var textColor = "зелёный" {
+        didSet {
+            self.infoLabel.text = "Выбран \(self.textColor)"
+        }
+    }
+    var backgroundColor = UIColor.green {
+        didSet {
+            self.view.backgroundColor = self.backgroundColor
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
