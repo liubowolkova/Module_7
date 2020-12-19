@@ -8,33 +8,49 @@
 import UIKit
 
 class NestedViewController: UIViewController {
-    var currentColor = UIColor.black
+    var currentColor = UIColor.black {
+        didSet {
+            self.view.backgroundColor = self.currentColor
+        }
+    }
     var innerCurrentColor = UIColor.white
     private var innerController: InnerViewController?
-    @IBOutlet var mainView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mainView.backgroundColor = currentColor
+        self.view.backgroundColor = self.currentColor
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if var viewController = segue.destination as? InnerViewController, segue.identifier == "EmbedWithin" {
-//            innerController = viewController
-//            innerController!.currentColor = innerCurrentColor
-//        }
-//    }
-    
-    @IBAction func onChangeToGreen(_ sender: Any) {
-        innerCurrentColor = UIColor.green
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? InnerViewController, segue.identifier == "EmbedWithin" else {
+            return
+        }
+        innerController = vc
+        vc.currentColor = self.innerCurrentColor
+        vc.delegate = self
     }
     
-    @IBAction func onChangeToYellow(_ sender: Any) {
-        innerCurrentColor = UIColor.yellow
+    @IBAction func changeInnerBackground(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            self.innerCurrentColor = .green
+        case 1:
+            self.innerCurrentColor = .yellow
+        case 2:
+            self.innerCurrentColor = .purple
+        default: break
+        }
+        
+        self.setInnerColor(innerCurrentColor)
     }
     
-    @IBAction func onChangeToPurple(_ sender: Any) {
-        innerCurrentColor = UIColor.purple
+    func setInnerColor(_ color: UIColor) {
+        self.innerController?.currentColor = color
     }
-    
+}
+
+extension NestedViewController: InnerViewDelegate {
+    func setBackgound(_ color: UIColor) {
+        self.currentColor = color
+    }
 }

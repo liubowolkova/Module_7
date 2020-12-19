@@ -70,15 +70,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Green chosen" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Pc-ijz">
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Green chosen" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Pc-ijz">
                                 <rect key="frame" x="132" y="94" width="150" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-oU-LNb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebs-oU-LNb">
                                 <rect key="frame" x="125.5" y="178" width="163" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать зелёный">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
@@ -87,18 +85,16 @@
                                     <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="DQH-6H-AHR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-0q-94y">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgx-0q-94y">
                                 <rect key="frame" x="137" y="235" width="140" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать синий"/>
                                 <connections>
                                     <action selector="chooseAndReturn:" destination="4eX-Mo-dJn" eventType="touchUpInside" id="vHm-Bp-fI7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Xe-jcC">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-Xe-jcC">
                                 <rect key="frame" x="125" y="298" width="164" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Выбрать красный">
                                     <color key="titleColor" systemColor="systemRedColor"/>
@@ -110,6 +106,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8LJ-TR-0A6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ebs-oU-LNb" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="61R-cB-leI"/>
+                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="USe-Oa-6fq"/>
+                            <constraint firstItem="VdY-Xe-jcC" firstAttribute="top" secondItem="dgx-0q-94y" secondAttribute="bottom" constant="27" id="dPt-Ui-DDn"/>
+                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="dne-rB-Rb2"/>
+                            <constraint firstItem="wPW-Pc-ijz" firstAttribute="top" secondItem="8LJ-TR-0A6" secondAttribute="top" constant="94" id="e7n-cD-KaD"/>
+                            <constraint firstItem="ebs-oU-LNb" firstAttribute="top" secondItem="wPW-Pc-ijz" secondAttribute="bottom" constant="50" id="go7-sq-dxe"/>
+                            <constraint firstItem="dgx-0q-94y" firstAttribute="top" secondItem="ebs-oU-LNb" secondAttribute="bottom" constant="21" id="gvm-EP-A7D"/>
+                            <constraint firstItem="dgx-0q-94y" firstAttribute="centerX" secondItem="M1c-wz-QRW" secondAttribute="centerX" id="o8s-yG-OZl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XQa-sP-ATR"/>
                     <connections>
@@ -274,31 +280,34 @@
                                     <segue destination="tzw-tR-JTx" kind="embed" identifier="EmbedWithin" id="JtM-3Q-uWf"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Im-4X-ycI">
-                                <rect key="frame" x="168" y="128" width="81" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Im-4X-ycI">
+                                <rect key="frame" x="166.5" y="128" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Зелёный"/>
+                                <state key="normal" title="Зелёный">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="onChangeToGreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b35-Ka-uzd"/>
+                                    <action selector="changeInnerBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owt-vL-auH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-8e-EN8">
-                                <rect key="frame" x="170" y="186" width="75" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E22-8e-EN8">
+                                <rect key="frame" x="169.5" y="186" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Жёлтый"/>
+                                <state key="normal" title="Жёлтый">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="onChangeToYellow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="det-Mm-BDn"/>
+                                    <action selector="changeInnerBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Epf-g2-YbG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEL-EY-iP3">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEL-EY-iP3">
                                 <rect key="frame" x="154" y="248" width="106" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Пурпурный"/>
+                                <state key="normal" title="Пурпурный">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="onChangeToPurple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Lv-ix-47H"/>
+                                    <action selector="changeInnerBackground:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPR-aK-sZF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задание c" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eg-D4-Cwa">
@@ -315,13 +324,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
                             <constraint firstItem="1eg-D4-Cwa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="A8N-8C-JAY"/>
+                            <constraint firstItem="BEL-EY-iP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CiF-Oc-eV4"/>
                             <constraint firstItem="1eg-D4-Cwa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qas-PH-uHc"/>
+                            <constraint firstItem="BEL-EY-iP3" firstAttribute="top" secondItem="E22-8e-EN8" secondAttribute="bottom" constant="26" id="SK4-BE-v9K"/>
+                            <constraint firstItem="4Im-4X-ycI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zw4-H1-kdc"/>
+                            <constraint firstItem="E22-8e-EN8" firstAttribute="top" secondItem="4Im-4X-ycI" secondAttribute="bottom" constant="22" id="hzn-Hq-Hc6"/>
+                            <constraint firstItem="E22-8e-EN8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s0V-xq-NR6"/>
+                            <constraint firstItem="4Im-4X-ycI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="sg5-06-6oH"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="c" image="hand.point.up" catalog="system" id="gWk-W1-GoX"/>
-                    <connections>
-                        <outlet property="mainView" destination="8bC-Xf-vdC" id="IiH-tb-GxG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,36 +367,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="258" height="282"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-Lh-dpR">
-                                <rect key="frame" x="91" y="63" width="81" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-Lh-dpR">
+                                <rect key="frame" x="88.5" y="63" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Зелёный"/>
+                                <state key="normal" title="Зелёный">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeOutBackground:" destination="tzw-tR-JTx" eventType="touchUpInside" id="aHE-ii-Bdq"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-Pt-JZi">
-                                <rect key="frame" x="94" y="121" width="75" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="sPx-V1-nQT"/>
-                                </constraints>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-Pt-JZi">
+                                <rect key="frame" x="91.5" y="121" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Жёлтый"/>
+                                <state key="normal" title="Жёлтый">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeOutBackground:" destination="tzw-tR-JTx" eventType="touchUpInside" id="l5j-9z-0MW"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-P2-rHf">
-                                <rect key="frame" x="78" y="183" width="106" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-P2-rHf">
+                                <rect key="frame" x="76" y="183" width="106" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Пурпурный"/>
+                                <state key="normal" title="Пурпурный">
+                                    <color key="titleColor" systemColor="systemPurpleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeOutBackground:" destination="tzw-tR-JTx" eventType="touchUpInside" id="0Fb-ku-Yn1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yg9-74-IaM"/>
                         <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fbv-Pt-JZi" firstAttribute="centerX" secondItem="dr6-ev-lBI" secondAttribute="centerX" id="KDj-dx-dga"/>
+                            <constraint firstItem="5oU-P2-rHf" firstAttribute="centerX" secondItem="dr6-ev-lBI" secondAttribute="centerX" id="1fe-RJ-epC"/>
+                            <constraint firstItem="fbv-Pt-JZi" firstAttribute="centerX" secondItem="dr6-ev-lBI" secondAttribute="centerX" id="8Ab-58-p8C"/>
+                            <constraint firstItem="5oU-P2-rHf" firstAttribute="top" secondItem="fbv-Pt-JZi" secondAttribute="bottom" constant="26" id="8Qy-LO-W97"/>
+                            <constraint firstItem="Bqq-Lh-dpR" firstAttribute="top" secondItem="Yg9-74-IaM" secondAttribute="top" constant="19" id="Vba-u0-DcL"/>
+                            <constraint firstItem="Bqq-Lh-dpR" firstAttribute="centerX" secondItem="dr6-ev-lBI" secondAttribute="centerX" id="ZP3-ZB-htF"/>
+                            <constraint firstItem="fbv-Pt-JZi" firstAttribute="top" secondItem="Bqq-Lh-dpR" secondAttribute="bottom" constant="22" id="wud-G1-cTb"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="innerView" destination="dr6-ev-lBI" id="SfR-vq-Iqd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOG-zY-GNE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,8 +431,14 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
