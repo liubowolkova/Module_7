@@ -8,11 +8,12 @@
 import UIKit
 
 class NestedViewController: UIViewController {
-    var currentColor = UIColor.black {
+    var currentColor = UIColor.lightGray {
         didSet {
             self.view.backgroundColor = self.currentColor
         }
     }
+    
     var innerCurrentColor = UIColor.white
     private var innerController: InnerViewController?
     
