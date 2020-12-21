@@ -39,5 +39,7 @@ class ChooseViewController: UIViewController {
         }
         
         delegate?.setBackground(backgroundColor: self.color, text: self.sendedText)
+        
+        dismiss(animated: true, completion: nil)
     }
 }
